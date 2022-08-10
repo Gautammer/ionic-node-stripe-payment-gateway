@@ -7,7 +7,7 @@ app.use(express.json());
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "http://localhost:8100"); // for ionic serve
-     res.header("Access-Control-Allow-Origin", "capacitor://localhost"); // for ionic capacitor run ios/android
+    // res.header("Access-Control-Allow-Origin", "capacitor://localhost"); // for ionic capacitor run ios/android
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });

@@ -1,0 +1,97 @@
+[debug] [2022-08-10T08:43:27.214Z] ----------------------------------------------------------------------
+[debug] [2022-08-10T08:43:27.216Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2022-08-10T08:43:27.217Z] CLI Version:   11.5.0
+[debug] [2022-08-10T08:43:27.217Z] Platform:      darwin
+[debug] [2022-08-10T08:43:27.217Z] Node Version:  v16.16.0
+[debug] [2022-08-10T08:43:27.218Z] Time:          Wed Aug 10 2022 14:13:27 GMT+0530 (India Standard Time)
+[debug] [2022-08-10T08:43:27.219Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-08-10T08:43:27.275Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-08-10T08:43:27.275Z] > authorizing via signed-in user (mergautam9@gmail.com)
+[debug] [2022-08-10T08:43:27.275Z] [iam] checking project mange-kimambi for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-08-10T08:43:27.277Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mange-kimambi:testIamPermissions [none]
+[debug] [2022-08-10T08:43:27.277Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mange-kimambi:testIamPermissions x-goog-quota-user=projects/mange-kimambi
+[debug] [2022-08-10T08:43:27.277Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mange-kimambi:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-10T08:43:28.883Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mange-kimambi:testIamPermissions 200
+[debug] [2022-08-10T08:43:28.884Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mange-kimambi:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-08-10T08:43:28.885Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/mange-kimambi/serviceAccounts/mange-kimambi@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-08-10T08:43:28.885Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/mange-kimambi/serviceAccounts/mange-kimambi@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-08-10T08:43:30.474Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/mange-kimambi/serviceAccounts/mange-kimambi@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-08-10T08:43:30.474Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/mange-kimambi/serviceAccounts/mange-kimambi@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-08-10T08:43:30.476Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi [none]
+[debug] [2022-08-10T08:43:31.087Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi 200
+[debug] [2022-08-10T08:43:31.087Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi {"projectId":"mange-kimambi","projectNumber":"614921320596","displayName":"Mange Kimambi","name":"projects/mange-kimambi","resources":{"hostingSite":"mange-kimambi","realtimeDatabaseInstance":"mange-kimambi-default-rtdb","storageBucket":"mange-kimambi.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_0ad56c6f-2264-4acd-906e-4ed26581b08b"}
+[info] 
+[info] === Deploying to 'mange-kimambi'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2022-08-10T08:43:31.091Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi [none]
+[debug] [2022-08-10T08:43:31.705Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi 200
+[debug] [2022-08-10T08:43:31.705Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi {"projectId":"mange-kimambi","projectNumber":"614921320596","displayName":"Mange Kimambi","name":"projects/mange-kimambi","resources":{"hostingSite":"mange-kimambi","realtimeDatabaseInstance":"mange-kimambi-default-rtdb","storageBucket":"mange-kimambi.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_0ad56c6f-2264-4acd-906e-4ed26581b08b"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-08-10T08:43:31.709Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-08-10T08:43:31.710Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-08-10T08:43:31.712Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/cloudbuild.googleapis.com [none]
+[debug] [2022-08-10T08:43:31.713Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/artifactregistry.googleapis.com [none]
+[debug] [2022-08-10T08:43:33.656Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/cloudbuild.googleapis.com 200
+[debug] [2022-08-10T08:43:33.656Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/cloudbuild.googleapis.com [omitted]
+[info] ✔  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-08-10T08:43:33.657Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/cloudfunctions.googleapis.com 200
+[debug] [2022-08-10T08:43:33.657Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/cloudfunctions.googleapis.com [omitted]
+[info] ✔  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-08-10T08:43:33.661Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/artifactregistry.googleapis.com 200
+[debug] [2022-08-10T08:43:33.661Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/artifactregistry.googleapis.com [omitted]
+[info] ✔  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-08-10T08:43:33.662Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/runtimeconfig.googleapis.com 200
+[debug] [2022-08-10T08:43:33.662Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/mange-kimambi/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-08-10T08:43:33.663Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi/adminSdkConfig [none]
+[debug] [2022-08-10T08:43:34.261Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi/adminSdkConfig 200
+[debug] [2022-08-10T08:43:34.262Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mange-kimambi/adminSdkConfig {"projectId":"mange-kimambi","databaseURL":"https://mange-kimambi-default-rtdb.firebaseio.com","storageBucket":"mange-kimambi.appspot.com","locationId":"us-central"}
+[debug] [2022-08-10T08:43:34.263Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mange-kimambi/configs [none]
+[debug] [2022-08-10T08:43:34.980Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mange-kimambi/configs 200
+[debug] [2022-08-10T08:43:34.980Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/mange-kimambi/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-08-10T08:43:34.985Z] Validating nodejs source
+[debug] [2022-08-10T08:43:37.743Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "express": "^4.18.1",
+    "stripe": "^9.6.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-08-10T08:43:37.744Z] Building nodejs source
+[debug] [2022-08-10T08:43:37.751Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-08-10T08:43:37.994Z] Serving at port 9005
+
+[debug] [2022-08-10T08:43:38.106Z] FetchError: request to http://localhost:9005/__/quitquitquit failed, reason: connect ECONNREFUSED 127.0.0.1:9005
+    at ClientRequest.<anonymous> (/usr/local/lib/node_modules/firebase-tools/node_modules/node-fetch/lib/index.js:1491:11)
+    at ClientRequest.emit (node:events:527:28)
+    at ClientRequest.emit (node:domain:475:12)
+    at Socket.socketErrorListener (node:_http_client:454:9)
+    at Socket.emit (node:events:527:28)
+    at Socket.emit (node:domain:475:12)
+    at emitErrorNT (node:internal/streams/destroy:157:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:122:3)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+[error] 
+[error] Error: An unexpected error has occurred.
